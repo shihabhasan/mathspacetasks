@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MathSpaceTasks</title>
+	
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		{% load staticfiles %}
+		<link rel="shortcut icon" href="{% static 'images/icon.ico' %}" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/templatemo-style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<script src="{% static 'js/vendor/modernizr-2.6.2.min.js' %}"></script>
+		<script src="{% static 'js/vendor/prefixfree.min.js' %}"></script>
+		<script src="{% static 'js/vendor/jquery-1.10.2.min.js' %}"></script>
+
+
+    </head>
+    <body>
+        		 <!-- start preloader -->
+        <div id="loader-wrapper">
+            <div class="logo"></div>
+            <div id="loader">
+            </div>
+        </div>
+        <div class="site-bg"></div>
+        <div class="site-bg-overlay"></div>
+		
+		<!-- TOP HEADER -->
+        <div class="top-header">
+        </div> <!-- .top-header -->		
+<!-- Start Header Section -->
+<header class="main_menu_sec navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-12">
+				<a href="/home"><img src="{% static 'images/mathspace.svg' %}" alt="mathspacetasks_logo" style="width:350px; position:relative; top:10px; margin-bottom:10px"></a>
+			</div>
+			<div class="col-md-9 hidden-sm hidden-xs" style="position:relative; top:20px">				
+			<div class="pull-right">
+				<a href="/home" class="btn btn-margin-right"><i class="fa fa-home fa-lg"></i>&nbsp;Home</a>
+				<a href="/help" class="btn btn-margin-right"><i class="fa fa-cogs fa-lg"></i>&nbsp;Help</a>
+				<a href="/contact" class="btn btn-margin-right"><i class="fa fa-envelope fa-lg"></i>&nbsp;Contact</a>
+			</div>
+			</div>	
+		</div>	
+	</div>	
+</header>
+<!-- End Header Section -->
+
+        
+
+		
+		<div class="visible-xs visible-sm responsive-menu">
+			<a href="#" class="toggle-menu">
+				<i class="fa fa-bars"></i> Show Menu
+			</a>
+			<div class="show-menu">
+				<ul >
+					<li>
+						<a class="show-1 active homebutton" href="/home"><i class="fa fa-home"></i>Home</a>
+					</li>
+					<li>
+						<a class="show-2 aboutbutton" href="/help"><i class="fa fa-cogs"></i>Help</a>
+					</li>
+					<li>
+						<a class="show-5 contactbutton" href="/contact"><i class="fa fa-envelope"></i>Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="container" id="page-content">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 content-holder">
+
+				{% block body %}
+				{% endblock %}
+
+				</div>
+			</div>
+		</div>
+        <!-- SITE-FOOTER -->
+        <div class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>
+                        	MathSpaceTasks is developed by <a href="http://shihabhasan.com">Shihab Hasan</a>. Copyright &copy; 2017 <a href="http://shihabhasan.com">Shihab Hasan</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .site-footer -->
+
+        
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+
+    </body>
+	
+</html>

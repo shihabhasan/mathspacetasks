@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+<p>
+Jason invented a mathematical scheme by which he assigns cities a number. Given any (lower case a-z) city name
+as a string input to your program, print the city's number.
+</p>
+<p>
+Sample input/output
+<font face="Courier New">
+<br>adelaide 5, beijing 59, chicago 2, cork 246, dubai -7, guangzhou 6823, jerusalem 661, lisbon 450, madrid 262, mecca 28, paris 692, seoul 393, shanghai 433, shenzhen 7256, sydney 8792, tokyo 4802, york 4426
+</font>
+</p>
+<p>
+e.g. your program should be able to determine the following city numbers:
+kualalumpur ?, london ?, naypyidaw ? ouaga ?
+</p>
+  
+<div class="col-xs-12 col-sm-5 col-sm-offset-4" align="center">
+    <div class="call-action call-action-boxed call-action-style1 glass" style="centre">
+        <h1 class="accent-color"> Task 3 solution app </h1>
+        <form name='task3_form' id='task3_form' method='post' action='task3_app' enctype="multipart/form-data"> {% csrf_token %} <!-- action is the URL you want to move to next-->
+            <p><h3> Enter city's name: </h3></p>
+            <p><h2><input type="text" name="task3_input" pattern="[a-zA-Z\s-]*" style="width: 200px; text-transform: lowercase;" required></h2></p>
+            <p><input type='submit' value='Submit'></p>
+            <!-- value that will appear after submission -->
+
+            <br> </br>
+            <h1 class="accent-color"> {{  output_text }} </h1>
+            <h2>{{ result }}</h2>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+

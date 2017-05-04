@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<p>
+    Write a program that calculates the probability for an n-sided die labelled with integers from 1 to n, to roll all the
+    numbers {1, ..., n}, in any order if the die is thrown n times.
+    e.g. A tetrahedral die can be made from four equilateral triangles. If the sides are labelled 1, 2, 3 and 4, what is the
+    probability of throwing the die four times and getting {1, 2, 3, 4} in any order?
+    Investigate how your program scales for moderately large numbers, such as n=1000.
+</p>
+
+<div class="col-xs-12 col-sm-5 col-sm-offset-4" align="center">
+    <div class="call-action call-action-boxed call-action-style1 glass" style="centre">
+        <h1 class="accent-color"> Task 2 solution app </h1>
+        <form name='task2_form' id='task2_form' method='post' action='task2_app' enctype="multipart/form-data"> {% csrf_token %} <!-- action is the URL you want to move to next-->
+            <p><h3> Enter the value of n: </h3></p>
+            <p><h2><input type="number" name="task2_input" style="width: 100px;" required></h2></p>
+            <p><input type='submit' value='Submit'></p>
+            <!-- value that will appear after submission -->
+
+            <br> </br>
+            <h1 class="accent-color"> {{  output_text }} </h1>
+            <h2>{{ result }}</h2>
+
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
