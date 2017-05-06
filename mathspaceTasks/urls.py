@@ -18,6 +18,7 @@ from django.contrib import admin
 
 from app import views
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
@@ -28,4 +29,8 @@ urlpatterns = [
     url(r'^task1_app$', views.task1_app, name='task1_app'),
     url(r'^task2_app$', views.task2_app, name='task2_app'),
     url(r'^task3_app$', views.task3_app, name='task3_app'),
+    url(r'^api$', views.ApiView.as_view(), name='api'),
+    url(r'^api/task1$', views.Task1ApiView.as_view(), name='task1_api'),
+    url(r'^api/task2/n=(?P<n>[0-9]+)$', views.Task2ApiView.as_view(), name='task2_api'),
+    url(r'^api/task3/city=(?P<city_name>[A-Za-z-]+)$', views.Task3ApiView.as_view(), name='task3_api'),
 ]
