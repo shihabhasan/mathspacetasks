@@ -1,4 +1,5 @@
 *.pyc
+*.conf
 __pycache__
 logs
 .idea

@@ -96,9 +96,11 @@ class ApiView(APIView):
         param='mathspacetasks.shihabhsan.com/api/task{id}/{parameter}'
         context = {'Usage': param}
         return Response(context)
+
 class Task1ApiView(APIView):
     def get(self, request):
          result = walking_robot()
+         result = result.split(";")
          context = {'result': result}
          return Response(context)
 
